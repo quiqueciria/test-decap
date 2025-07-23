@@ -1,0 +1,30 @@
+backend:
+  name: github # ¡Cambiamos de 'git' a 'github'!
+  repo: quiqueciria/test-decap # EJEMPLO: jdoe/mi-blog-astro
+  branch: main # O la rama por defecto de tu repo (master, main)
+  auth_type: pkce # Recomendado para mayor seguridad
+  app_id: Ov23li3VpZ7wPTHYweuo # ¡Pega aquí el Client ID que obtuviste!
+
+
+media_folder: "public/uploads" # O "src/assets/uploads"
+public_folder: "/uploads"      # O "/src/assets/uploads"
+
+collections: # Esta es la clave 'collections'
+  - name: "blog" # Primer elemento del array, empieza con un guion
+    label: "Entradas de Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string", required: true }
+      - { label: "Fecha de Publicación", name: "date", widget: "datetime" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "pages" # Segundo elemento del array, también empieza con un guion
+    label: "Páginas del Sitio"
+    folder: "src/content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string", required: true }
+      - { label: "Contenido", name: "body", widget: "markdown" }
