@@ -6,16 +6,14 @@
   <title>Gestor de Contenido</title>
 </head>
 <body>
-  <script src="https://unpkg.com/@decap-cms/app-backend-github@3.0.10/dist/decap-cms-app-backend-github.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@decap-cms/app-backend-github@3.0.10/dist/decap-cms-app-backend-github.js"></script>
 
-  <script src="https://unpkg.com/decap-cms@3.0.10/dist/decap-cms.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.0.10/dist/decap-cms.js"></script>
 
   <script>
-    // Asegúrate de que DecapCMS esté disponible
     if (window.DecapCMS) {
-
-      DecapCMS.registerBackend('github', DecapCMS.Backend.GitHub);
-
+      // Si tienes una llamada explícita para registrar el backend, déjala aquí
+      // DecapCMS.registerBackend('github', DecapCMS.Backend.GitHub);
     } else {
       console.error("DecapCMS no está definido. Revisa la carga de scripts.");
     }
